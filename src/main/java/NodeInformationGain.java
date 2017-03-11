@@ -1,11 +1,9 @@
-package ml.estimators.tree;
+
 
 import java.lang.Math;
 import java.util.List;
 import java.util.ArrayList;
 
-import ml.estimators.tree.BaseNode;
-import ml.estimators.tree.NodeInfo;
 
 public class NodeInformationGain implements  BaseNode{
 
@@ -14,16 +12,16 @@ public class NodeInformationGain implements  BaseNode{
 	private double splitingValue;
 	private List<float[]> data;
 	private float[] result;
-	private final NodeInformationGain parent;
-	private final NodeInformationGain leftChild;
-	private final NodeInformationGain rightChild;
+	//private final NodeInformationGain parent;
+	//private final NodeInformationGain leftChild;
+	//private final NodeInformationGain rightChild;
 	
 	
-	public NodeInformationGain(NodeInformationGain parent, List<float[]> data, float[] result)
+	public NodeInformationGain(List<float[]> data, float[] result)
 	{
-		this.parent = parent;
-		this.leftChild = null;
-		this.rightChild = null;
+		//this.parent = parent;
+		//this.leftChild = null;
+		//this.rightChild = null;
 		this.data = data;
 		this.result = result;
 		calcInformationGain();
@@ -139,13 +137,15 @@ public class NodeInformationGain implements  BaseNode{
 	
 	}
 	
-	
-	
-	public NodeInfo getSplittinInfo()
-	{	
-				return new NodeInfo(this.informationGain,this.splittingFeature,this.splitingValue);
+	public double getInformationGain(){
+		return this.informationGain;
 	}
-	
+	public int getSplittingFeature(){
+		return this.splittingFeature;
+	}
+	public double getSplitingValue(){
+		return this.splitingValue;
+	}
 	
 	
 }
