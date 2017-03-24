@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.logging.Logger;
 
-public class ReadCSV {
+public class ReadCSV {// reads table in CSV format to HashMap
 	private static final String CLASS_NAME = ReadCSV.class.getCanonicalName();
     //private static final String PKG_NAME = ReadCSV.class.getPackage().getName();
     private static Logger logger = Logger.getLogger(CLASS_NAME);
