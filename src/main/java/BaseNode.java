@@ -4,6 +4,5 @@
 
 public interface BaseNode {	
 	double getInformationGain();
-	int getSplittingFeature();
-	double getSplitingValue();
+	String getSplittingFeature();
 }
