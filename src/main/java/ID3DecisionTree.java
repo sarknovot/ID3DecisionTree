@@ -1,7 +1,7 @@
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 /**
@@ -67,7 +67,7 @@ public class ID3DecisionTree<T extends Comparable<T>> {
 	  * @exception llegalArgumentException No data or Lists representing data columns having different lenghts.
 	  * @return ArrayList conaining predicted values.
 	  */
-	public  ArrayList<T> predict(Map<String, LinkedList<T>> newData, ArrayList<T> resultOfPrediction){
+	public  List<T> predict(Map<String, LinkedList<T>> newData, List<T> resultOfPrediction){
 		//TODO write test for predict
 		
 		if (newData == null){		

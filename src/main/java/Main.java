@@ -60,7 +60,7 @@ public class Main {
 		 classificationResult.add(new String());
 	}
 	//classify new data and print result
-	classificationResult = tree.predict(newDataMap, classificationResult);
+	classificationResult = (ArrayList<String>) tree.predict(newDataMap, classificationResult);
 	for(String res: classificationResult){
 		System.out.println(res);
 	}	 

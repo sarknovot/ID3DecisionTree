@@ -91,7 +91,7 @@ public class TreeInformationGainTest {
 			 classificationResult.add(new String());
 		}
 		//classify new data and print result
-		classificationResult = tree.predict(newDataMap, classificationResult);
+		classificationResult = (ArrayList<String>) tree.predict(newDataMap, classificationResult);
 		String[] resulArray = new String[classificationResult .size()];
 		resulArray = classificationResult.toArray(resulArray);
 		System.out.println(resulArray);
