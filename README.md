@@ -6,6 +6,6 @@ The API of decision tree is created by class ID3DecisionTree<T extends Comparabl
 - void fit(Map<String, LinkedList<T>> data, LinkedList<T> output) - based on training data build a decision tree, only binary output is accepted
 - List<T> predict(Map<String, LinkedList<T>> newData, List<T> resultOfPrediction) - classifies newData, result returns in resultOfPrediction
 
-To read data from csv file, class ReadCSV can be used. Public methods:
+To read data from csv file, class ReadCSV can be used. The class makes use of org.apache.commons.csv. Public methods are:
 - ReadCSV(String filename) - filename is name of csv file, name of features are expected in the first row of the file
 - Map<String, LinkedList<String>> getParsedFile() - returns read data
